@@ -1,0 +1,20 @@
+<div class="card bg-ligth mb-3" *ngIf="movie">
+    <div class="card-header text-center"><b>Selected Movie</b></div>
+    <img src="assets/img/{{movie.imageUrl}}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-subtitle mb-2 text-muted">Movie Id : {{movie.id}}</h5>
+        <div class="form-group">
+            <h6 class="card-title">Movie Name :</h6>
+            <input type="text" [(ngModel)]="movie.name" class="form-control">
+        </div>
+        <div class="form-group">
+            <h6 class="card-title">Movie Url :</h6>
+            <input type="text" [(ngModel)]="movie.imageUrl" class="form-control">
+        </div>
+        <div class="form-group">
+            <h6 class="card-title">Movie Description :</h6>
+            <textarea cols="10" rows="10" [(ngModel)]="movie.description" class="form-control"></textarea>
+        </div>
+        <button (click)="save()" type="button" class="btn btn-outline-secondary form-control">Save Changes</button>
+    </div>
+</div>
